@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uzumaki Family</title>
+    <link rel="icon" href="StanfordAsiaCollege0.jpg" type="image/jpeg">
+</head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Courier New, Monospace;
+      color: white;
+      text-align: center;
+      background-color: black;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 999;
+      transition: opacity 1s ease;
+    }
+
+    #intro h1 {
+      font-size: 50px;
+      color: #FFA500;
+      text-shadow: 0 0 10px #fc6f03, 0 0 30px #fff;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    #intro p {
+      font-size: 20px;
+      color: #fff;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    #playBtn {
+      margin-top: 40px;
+      background: transparent;
+      border: 2px solid #ffcc66;
+      color: #ffcc66;
+      font-size: 22px;
+      padding: 10px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 3s;
+      box-shadow: 0 0 10px #ffb22f, 0 0 20px #ff8e1a;
+    }
+
+    #playBtn:hover {
+      background-color: rgba(255,255,255,0.2);
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    #main {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      color: #FFA500;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #fc6f03, 0 0 20px #ccc;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 30% 30% / 80% 80%;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 85%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    th, td {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 18px 25px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    th {
+      background-color: rgba(255, 204, 102, 0.95);
+      color: black;
+      font-weight: bold;
+    }
+
+    td {
+      color: #fff;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      border: 2px solid #ffcc66;
+    }
+      
+    .gallery {
+      overflow: hidden;
+      width: 100%;
+      height: 200px;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .slide-track {
+      display: flex;
+      width: calc(250px * 8 * 2);
+      animation: move 30s linear infinite;
+    }
+
+    .slide {
+      width: 250px;
+      height: 200px;
+      background-position: center;
+      background-size: cover;
+      margin: 0 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="intro">
+    <h1>UZUMAKI FAMILY</h1>
+    <p>The story of power that flows through generations.</p>
+    <p>TABLE PROJECT ICT</p>
+    <p>Strength. Unity. Legacy</p>
+    <button id="playBtn">Play</button>
+    <br>
+    <p>© 2025 Standford Asia College — Created by [Reiven Qyell Berayo]</p>
+  </div>
+
+  <div id="main">
+
+    <video id="bgVideo" loop>
+      <source src="FELLINGLIKENAGIXREI.mp4" type="video/mp4">
+    </video>
+
+    <audio id="bgAudio" loop>
+      <source src="naruto-theme.mp3" type="audio/mpeg">
+    </audio>
+    <h1>UZUMAKI FAMILY MEMBERS</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Members</th>
+        <th>Picture</th>
+      </tr>
+      <tr>
+        <td>Uzumaki Naruto</td>
+        <td>Father</td>
+        <td>Seventh Hokage</td>
+        <td><img src="naruto.jpg" alt="Naruto"></td>
+      </tr>
+      <tr>
+        <td>Uzumaki Hinata</td>
+        <td>Mother</td>
+        <td>Former Hyuga Clan Member</td>
+        <td><img src="hinata.jpg" alt="Hinata"></td>
+      </tr>
+      <tr>
+        <td>Uzumaki Boruto</td>
+        <td>Son</td>
+        <td>Shinobi of Konoha</td>
+        <td><img src="boruto.jpg" alt="Boruto"></td>
+      </tr>
+      <tr>
+        <td>Uzumaki Himawari</td>
+        <td>Daughter</td>
+        <td>Academy Student</td>
+        <td><img src="himawari.jpg" alt="Himawari"></td>
+      </tr>
+    </table>
+
+    <div class="gallery">
+      <div class="slide-track">
+              <div class="slide" style="background-image: url('narutoaura.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura.jpg');"></div>
+      <div class="slide" style="background-image: url('himawariaura.jpg');"></div>
+      <div class="slide" style="background-image: url('narutoaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('narutoaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('himawariaura1.jpg');"></div>
+     <div class="slide" style="background-image: url('narutoaura.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura.jpg');"></div>
+      <div class="slide" style="background-image: url('himawariaura.jpg');"></div>
+      <div class="slide" style="background-image: url('narutoaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura1.jpg');"></div>
+      <div class="slide" style="background-image: url('narutoaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('hinataaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('borutoaura2.jpg');"></div>
+      <div class="slide" style="background-image: url('himawariaura1.jpg');"></div>
+  </div>
+
+  <script>
+    const video = document.getElementById("bgVideo");
+    const audio = document.getElementById("bgAudio");
+    const intro = document.getElementById("intro");
+    const main = document.getElementById("main");
+    const playBtn = document.getElementById("playBtn");
+
+    playBtn.addEventListener("click", () => {
+      video.play();
+      audio.play();
+
+      intro.style.opacity = "0";
+      setTimeout(() => {
+        intro.style.display = "none";
+        main.style.opacity = "1";
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
